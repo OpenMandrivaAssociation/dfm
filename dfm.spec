@@ -5,7 +5,7 @@ Release:	1
 License:	GPLv3+
 Group:		Graphical desktop/Other
 URL:		http://dfm.sourceforge.net/
-Source0:	http://downloads.sourceforge.net/project/dfm/src/Dino_src-0.4.1.tar.gz
+Source0:	http://downloads.sourceforge.net/project/dfm/src/Dino_src-%{version}.tar.gz
 BuildRequires:	qt4-devel
 BuildRequires:	imagemagick
 
@@ -66,3 +66,4 @@ EOF
 %{_bindir}/Dino
 %{_datadir}/applications/Dino.desktop
 %{_iconsdir}/hicolor/*/apps/Dino.*
+%doc CHANGELOG README
