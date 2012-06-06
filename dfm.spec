@@ -1,6 +1,6 @@
 Name:		dfm
 Summary:	Dino file manager
-Version:	0.4.1
+Version:	0.5
 Release:	1
 License:	GPLv3+
 Group:		Graphical desktop/Other
@@ -21,6 +21,7 @@ a built in text editor.
 %build
 %qmake_qt4
 %make
+lrelease Dino.pro
 
 %install
 #make install INSTALL_ROOT=%{buildroot}
@@ -30,11 +31,11 @@ a built in text editor.
 
 %__install -D -m 755 Dino %{buildroot}%{_bindir}/Dino
 %__cp -a translations/Dino_*.qm %{buildroot}%{_datadir}/Dino/translations/
-%__install -D -m 644 Dino.png %{buildroot}%{_iconsdir}/hicolor/64x64/apps/Dino.png
+%__install -D -m 644 dino.png %{buildroot}%{_iconsdir}/hicolor/64x64/apps/dino.png
 for size in 16 32 48
 do
 %__install -d -m 755 %{buildroot}%{_iconsdir}/hicolor/${size}x${size}/apps/
-convert -resize ${size}x${size} Dino.png %{buildroot}%{_iconsdir}/hicolor/${size}x${size}/apps/Dino.png
+convert -resize ${size}x${size} dino.png %{buildroot}%{_iconsdir}/hicolor/${size}x${size}/apps/dino.png
 done
 
 cat > %{buildroot}%{_datadir}/applications/Dino.desktop << EOF
@@ -44,7 +45,7 @@ Name=Dino
 GenericName=Dino
 Comment=Simple File Manager
 Exec=Dino
-Icon=Dino
+Icon=dino
 Terminal=false
 Type=Application
 StartupNotify=false
@@ -65,5 +66,5 @@ EOF
 %files -f Dino.lang
 %{_bindir}/Dino
 %{_datadir}/applications/Dino.desktop
-%{_iconsdir}/hicolor/*/apps/Dino.*
+%{_iconsdir}/hicolor/*/apps/dino.*
 %doc CHANGELOG README
