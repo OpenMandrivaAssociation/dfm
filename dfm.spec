@@ -30,7 +30,8 @@ lrelease Dino.pro
 %__install -d %{buildroot}%{_datadir}/applications/
 
 %__install -D -m 755 Dino %{buildroot}%{_bindir}/Dino
-%__cp -a translations/Dino_*.qm %{buildroot}%{_datadir}/Dino/translations/
+cp -a translations/Dino_*.qm %{buildroot}%{_datadir}/Dino/translations/
+%__rm -f %{buildroot}%{_datadir}/Dino/translations/Dino_xx_xx.qm
 %__install -D -m 644 dino.png %{buildroot}%{_iconsdir}/hicolor/64x64/apps/dino.png
 for size in 16 32 48
 do
@@ -60,6 +61,7 @@ cat > Dino.lang << EOF
 %lang(sr_BA) /usr/share/Dino/translations/Dino_sr_BA.qm
 %lang(de) /usr/share/Dino/translations/Dino_de.qm
 %lang(sr_RS) /usr/share/Dino/translations/Dino_sr_RS.qm
+%lang(es_VE) /usr/share/Dino/translations/Dino_es_VE.qm
 EOF
 %endif
 
