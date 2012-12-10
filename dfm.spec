@@ -70,3 +70,19 @@ EOF
 %{_datadir}/applications/Dino.desktop
 %{_iconsdir}/hicolor/*/apps/dino.*
 %doc CHANGELOG README
+
+
+%changelog
+* Wed Jun 06 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 0.5-1
++ Revision: 803009
++ rebuild (emptylog)
+
+* Wed Jun 06 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 0.5-1
++ Revision: 802998
+- update to 0.5
+
+* Mon Apr 23 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 0.4.1-1
++ Revision: 792899
+- add docs
+- imported package dfm
+
