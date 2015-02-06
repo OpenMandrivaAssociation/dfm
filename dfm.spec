@@ -1,7 +1,7 @@
 Name:		dfm
 Summary:	Dino file manager
 Version:	0.5
-Release:	1
+Release:	2
 License:	GPLv3+
 Group:		Graphical desktop/Other
 URL:		http://dfm.sourceforge.net/
