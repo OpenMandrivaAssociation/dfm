@@ -6,6 +6,7 @@ License:	GPLv3+
 Group:		Graphical desktop/Other
 URL:		https://dfm.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/project/dfm/src/Dino_src-%{version}.tar.gz
+BuildRequires:	make
 BuildRequires:	qt4-devel
 BuildRequires:	imagemagick
 
